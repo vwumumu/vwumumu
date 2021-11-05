@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '无木目',
-  tagline: '成为更好的自己',
-  url: 'https://chzhshch-wumumu.github.io',
-  baseUrl: '/chzhshch/',
+  title: 'Mumu Wu',
+  tagline: 'Beyond yourself',
+  url: 'https://vwumumu.github.io',
+  baseUrl: '/vwumumu/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'chzhshch-wumumu', // Usually your GitHub org/user name.
-  projectName: 'chzhshch', // Usually your repo name.
+  organizationName: 'vwumumu', // Usually your GitHub org/user name.
+  projectName: 'vwumumu', // Usually your repo name.
 
   presets: [
     [
@@ -57,9 +57,9 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'book/bookintro',
+            docId: 'other/otherintro',
             position: 'left',
-            label: '读书',
+            label: '其他',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -80,8 +80,8 @@ const config = {
                 to: '/docs/chzhshch/chzhshchintro',
               },
               {
-                label: '读书',
-                to: '/docs/book/bookintro',
+                label: '其他',
+                to: '/docs/other/otherintro',
               },
             ],
           },

@@ -41,5 +41,5 @@ function HomepageHeader() {
 // }
 
 export default function Home() {
-  return <Redirect to='/chzhshch/docs/chzhshch/chzhshchintro' />;
+  return <Redirect to='/vwumumu/docs/chzhshch/chzhshchintro' />;
 }

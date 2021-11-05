@@ -43,9 +43,9 @@ const sidebars = {
       collapsible: false
     },
   ],
-  bookSidebar: [
-    'book/bookintro',
-    'book/beyond-feelings',
+  otherSidebar: [
+    'other/otherintro',
+    'other/multiple-git-ssh',
   ],
 };
 
