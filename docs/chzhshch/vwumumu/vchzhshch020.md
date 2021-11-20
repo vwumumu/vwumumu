@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch020'
+id: 'vchzhshch020'
 title: '020.《论语》详解：给所有曲解孔子的人（二）'
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch023'
+id: 'vchzhshch023'
 title: '023.《论语》详解：给所有曲解孔子的人（五）'
 ---
 
