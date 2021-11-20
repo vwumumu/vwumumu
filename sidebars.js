@@ -44,7 +44,10 @@ const sidebars = {
               'chzhshch/original/chzhshch020', 
               'chzhshch/original/chzhshch021', 
               'chzhshch/original/chzhshch022', 
-              'chzhshch/original/chzhshch023'],
+              'chzhshch/original/chzhshch023', 
+              'chzhshch/original/chzhshch024', 
+              'chzhshch/original/chzhshch025', 
+              'chzhshch/original/chzhshch026'],
     },
     {
       type: 'category',
@@ -71,7 +74,10 @@ const sidebars = {
               'chzhshch/vwumumu/vchzhshch020', 
               'chzhshch/vwumumu/vchzhshch021', 
               'chzhshch/vwumumu/vchzhshch022', 
-              'chzhshch/vwumumu/vchzhshch023'],
+              'chzhshch/vwumumu/vchzhshch023', 
+              'chzhshch/vwumumu/vchzhshch024', 
+              'chzhshch/vwumumu/vchzhshch025', 
+              'chzhshch/vwumumu/vchzhshch026'],
       collapsible: false
     },
   ],
