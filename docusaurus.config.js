@@ -57,6 +57,12 @@ const config = {
           },
           {
             type: 'doc',
+            docId: 'book/bookintro',
+            position: 'left',
+            label: '读书',
+          },
+          {
+            type: 'doc',
             docId: 'other/otherintro',
             position: 'left',
             label: '其他',
@@ -78,6 +84,10 @@ const config = {
               {
                 label: '缠论',
                 to: '/docs/chzhshch/chzhshchintro',
+              },
+              {
+                label: '读书',
+                to: '/docs/book/bookintro',
               },
               {
                 label: '其他',
@@ -116,7 +126,7 @@ const config = {
             ],*/
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Mumu Wu.`,
       },
       prism: {
         theme: lightCodeTheme,
