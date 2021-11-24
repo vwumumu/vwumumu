@@ -107,6 +107,7 @@ const sidebars = {
   ],
   bookSidebar: [
     'book/bookintro',
+    'book/animal-farm'
   ],
   otherSidebar: [
     'other/otherintro',
