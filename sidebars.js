@@ -101,7 +101,9 @@ const sidebars = {
               'chzhshch/vwumumu/vchzhshch035', 
               'chzhshch/vwumumu/vchzhshch036', 
               'chzhshch/vwumumu/vchzhshch037', 
-              'chzhshch/vwumumu/vchzhshch038'],
+              'chzhshch/vwumumu/vchzhshch038', 
+              'chzhshch/vwumumu/vchzhshch039', 
+              'chzhshch/vwumumu/vchzhshch040'],
       collapsible: false
     },
   ],
