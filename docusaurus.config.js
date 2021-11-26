@@ -63,6 +63,12 @@ const config = {
           },
           {
             type: 'doc',
+            docId: 'coding/codingintro',
+            position: 'left',
+            label: '编程',
+          },
+          {
+            type: 'doc',
             docId: 'other/otherintro',
             position: 'left',
             label: '其他',
@@ -88,6 +94,10 @@ const config = {
               {
                 label: '读书',
                 to: '/docs/book/bookintro',
+              },
+              {
+                label: '编程',
+                to: '/docs/coding/codingintro',
               },
               {
                 label: '其他',

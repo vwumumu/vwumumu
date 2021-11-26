@@ -119,6 +119,10 @@ const sidebars = {
     'book/bookintro',
     'book/animal-farm'
   ],
+  codingSidebar: [
+    'coding/codingintro',
+    'coding/useful-js'
+  ],
   otherSidebar: [
     'other/otherintro',
     'other/multiple-git-ssh',
