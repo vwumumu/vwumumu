@@ -93,4 +93,6 @@ title: '书单'
 
 ### 《Don't make me think》
 
+### 《货币未来》
+
 ## 已读：
