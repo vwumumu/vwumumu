@@ -1,5 +1,5 @@
 ---
-id: 'fe-node'
+id: 'fe-note'
 title: '前端学习笔记'
 ---
 

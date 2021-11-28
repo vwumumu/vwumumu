@@ -70,8 +70,7 @@ const sidebars = {
               'chzhshch/original/chzhshch046', 
               'chzhshch/original/chzhshch047', 
               'chzhshch/original/chzhshch048', 
-              'chzhshch/original/chzhshch049', 
-              'chzhshch/original/chzhshch050'],
+              'chzhshch/original/chzhshch049'],
     },
     {
       type: 'category',
