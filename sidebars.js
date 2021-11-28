@@ -132,7 +132,8 @@ const sidebars = {
   ],
   codingSidebar: [
     'coding/codingintro',
-    'coding/useful-js'
+    'coding/useful-js',
+    'coding/fe-note'
   ],
   otherSidebar: [
     'other/otherintro',
