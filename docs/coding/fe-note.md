@@ -21,9 +21,7 @@ undefined, null, '', NaN, 0
 ## 对象
 * 定义
 
-无序
-
-键值对
+无序的键值对
 
 * 写法
 ```js
@@ -188,6 +186,48 @@ Dog.prototype.run = function(){
 let dog1 = new Dog('xiaobai')
 ```
 
+---11/29/2021---
+---11/30/2021---
+
+* 原型公式
+
+对象的原型等于其构造函数的prototype
+
+```js
+a.__proto__ === A.prototype
+```
+
+* 构造函数最终版
+
+```js
+function Circle(r){
+    this.r = r
+}
+
+Circle.prototype.getArea = function(){
+    return Math.PI * 
+}
+
+Circle.prototype.getLength = function(){
+    return Math.PI * this.r * 2
+}
+
+let circle = new Circle(5)
+
+circle.r
+circle.getArea()
+circle.getLength()
+```
+
+
+
+
+
+
+## 数组
+
+## 函数
+
 ## 代码规范
 
 * 大小写
@@ -201,12 +241,3 @@ let dog1 = new Dog('xiaobai')
 new后面+名次
 
 其他函数，一般使用动词开头
-
-
-
----11/29/2021---
-
-## 数组
-
-## 函数
-
