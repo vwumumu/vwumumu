@@ -14,13 +14,6 @@ title: '书单'
 - 原作名：Principles: Life and Work
 - ISBN：9787508684031
 
-### 《动物庄园》
-
-- 作者：乔治·奥威尔(George Orwell)
-- 副标题：N/A
-- 原作名：Animal Farm
-- ISBN：9787542630544
-
 ### 《论语》
 
 - 作者：孔子及其弟子
@@ -100,3 +93,9 @@ title: '书单'
 ### 《沟通的方法》
 
 ## 已读：
+### 《动物庄园》
+
+- 作者：乔治·奥威尔(George Orwell)
+- 副标题：N/A
+- 原作名：Animal Farm
+- ISBN：9787542630544
