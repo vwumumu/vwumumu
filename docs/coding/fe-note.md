@@ -205,7 +205,7 @@ function Circle(r){
 }
 
 Circle.prototype.getArea = function(){
-    return Math.PI * 
+    return Math.PI * Math.pow(this.r,2)
 }
 
 Circle.prototype.getLength = function(){
@@ -218,15 +218,195 @@ circle.r
 circle.getArea()
 circle.getLength()
 ```
+
+* 构造函数ES6版
+```js
+class Circle{
+    constructor(r){
+        this.r = r
+    }
+    getArea(){
+        return Math.PI * Math.pow(this.r,2)
+    }
+
+    getLength(){
+        return Math.PI * this.r * 2
+    }
+}
+
+```
+
+
 ---11/30/2021---
----12/01/2021---
+---12/02/2021---
 
-
-
----12/01/2021---
 ## 数组
 
+* 定义一个数组
+
+```js
+let arr = [1, 2, 3]
+let arr = new Array(1, 2, 3)  //元素为1, 2, 3
+let arr = new Array(3)  //长度为3的空数组
+```
+
+* 数组对象的自身属性
+
+```js
+// '0'/'1'/'2'/'length'
+```
+
+属性名没有数字，只有字符串
+
+* 数组对象的共有属性
+
+push，在最后加元素
+pop，把最后元素弹出
+shift，把开头元素弹出
+unshift，在开头加元素
+join，用什么连接arr中的每一个元素，比如arr = [1,2,3],arr.join(a)则返回[1a2a3],即用a代替逗号，
+contact，连接两个数组arr1 = [1,2,3] arr2 = [4,5,6] , arr1.contact(arr2),返回[1,2,3,4,5,6]
+slice，截取数组的一部分，arr.slice(1) //从第二个元素开始截取
+
+---12/02/2021---
 ## 函数
+
+在js中，函数也是一个对象
+
+* 定义一个函数
+function fn(x,y){return x+y}
+let fn2 = function fn(x,y){return x+y}
+let fn = (x,y) => x+y
+let fn = new Function('x','y','return x+y')
+
+* 函数对象的重要自身属性
+
+name
+length
+
+* 函数对象的重要共有属性
+
+all
+apply
+bind
+
+* js终极一问
+
+window是由其构造函数构造，即Window；
+window.Ojbect由window.Function构造；
+window.Function是由浏览器构造Function，然后指定它的构造者是自己，即windows.Function.constructor === window.Function 
+
+## 数组2
+
+* 新建
+
+let arr = [1, 2, 3]
+let arr = new Array(1,2,3)
+let arr = new Array(3)
+
+* 转化
+
+let arr = '1,2,3'.split(',')
+let arr = '123'.split('')
+Array.from('123')
+
+* 伪数组
+
+长得像数组的数组，但不是基于数组的原型构造的，意味着不能使用数据的method。
+
+* 删
+
+删的方式跟删对象一样，delete arr[0],但是删完后，数组的长度不变，这是对象的删法，不太适合数组。
+
+只有长度，没有内容，叫稀疏数组。
+
+正确的删除数组元素的方法应该使用数组的相关方法去删：
+arr.shift() //删开头
+arr.pop()  //删结尾
+arr.splice(index,1)  //删除index的一个元素
+arr.splice(index,1,'x')  //删除index的一个元素，并在同一个位置添加'x'
+arr.splice(index,1,'x','y')  //同上，添加'x','y'
+
+* 查
+
+对象的方法对数组都可以用，但是很多时候不适用，比如伪数组，即数组里面有个属性的名不是数字，比如是x
+
+for(let key in arr){console.log(`${key}:${arr[key]}`)},这种方式，会把x也便利出来。
+
+可以通过限制便利数字，达到输出数组的目的：
+
+for(let i = 0; i < arr.length; i++){
+    console.log(`${i}:${[i]}`)
+}
+
+也可以直接使用数组的forEach方法：
+arr.forEach(function(xxx){console.log(xxx)})  //只打印数组的值
+arr.forEach(function(xxx,yyy){console.log(`${yyy}:${xxx}`)})  //遍历数组
+
+---12/02/2021---
+---12/03/2021---
+
+* 索引越界
+arr[arr.length] === undefined
+
+举例：
+for(let i = 0 ; i <= arr.length; i++){
+    console.log(arr[i].toString())
+}
+
+因为i=arr.length时，数组的对象不存在，所以会取不到，就意味着索引超过了范围，索引越界。
+
+* 查：
+
+arr.indexOf(13), 判断13在不在数组arr中，如果返回-1，就表示不在，如果在，返回第一个该元素的位置下标。
+
+arr.find(x => x%5===0),返回符合条件的第一个元素
+
+arr.findIndex(x => x%5===0),返回符合条件的一个元素的下标
+
+* 增
+
+arr.shift() //删开头
+arr.pop()  //删结尾
+arr.splice(index,1)  //删除index的一个元素
+arr.splice(index,1,'x')  //删除index的一个元素，并在同一个位置添加'x'
+arr.splice(index,1,'x','y')  //同上，添加'x','y'
+
+* 排序：
+arr.sort((a,b) => a.score - b.score) //从小到大
+
+* 数组变换
+
+* map n变n
+
+let arr = [1,2,3,4,5,6]
+arr.map(item => item*item)  //告诉map，怎么变arr中的item
+
+* filter n变少
+
+let arr = [1,2,3,4,5,6]
+arr.filter(item => item%2 === 0 ? true : false)
+可以简写成：
+arr.filter(item => item%2 === 0) 即，返回结果为true的元素
+
+* reduce n变1
+
+let arr = [1,2,3,4,5,6]
+arr.reduce((sum, item)=>{return sum + item},0)
+
+* reduce 实现map
+
+let arr = [1,2,3,4,5,6]
+arr.reduce((bucket,item)=>{return bucket.concat(item*item)},[])
+
+* reduce 实现filter
+
+```js
+let arr = [1,2,3,4,5,6]
+arr.reduce((result,item)=> item % 2 === 1 ? result: result.concat(item),[])
+arr.reduce((result,item)=> result.concat(item%2===1?[]:item),[])  //更简洁优美的上一行的美化
+```
+
 
 ## 代码规范
 
