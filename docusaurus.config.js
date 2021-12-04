@@ -69,6 +69,12 @@ const config = {
           },
           {
             type: 'doc',
+            docId: 'cookbook/cookbookintro',
+            position: 'left',
+            label: '菜谱',
+          },
+          {
+            type: 'doc',
             docId: 'other/otherintro',
             position: 'left',
             label: '其他',

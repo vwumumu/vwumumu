@@ -167,6 +167,10 @@ const sidebars = {
     'other/otherintro',
     'other/multiple-git-ssh',
   ],
+  cookBookSidebar: [
+    'cookbook/cookbookintro',
+    'cookbook/pear-soup'
+  ],
 };
 
 module.exports = sidebars;
