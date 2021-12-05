@@ -163,13 +163,14 @@ const sidebars = {
     'coding/useful-js',
     'coding/fe-note'
   ],
+  cookBookSidebar: [
+    'cookbook/cookbookintro',
+    'cookbook/xiaodiao-litang',
+    'cookbook/hongshao-paigu'
+  ],
   otherSidebar: [
     'other/otherintro',
     'other/multiple-git-ssh',
-  ],
-  cookBookSidebar: [
-    'cookbook/cookbookintro',
-    'cookbook/pear-soup'
   ],
 };
 

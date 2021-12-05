@@ -1,5 +1,5 @@
 ---
-id: 'pear-soup'
+id: 'xiaodiao-litang'
 title: '小吊梨汤'
 ---
 
