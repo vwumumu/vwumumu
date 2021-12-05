@@ -88,7 +88,9 @@ const sidebars = {
     {
       type: 'category',
       label: '无木目版',
-      items: ['chzhshch/vwumumu/vchzhshch001',
+      items: [
+        'chzhshch/vwumumu/comments',
+        'chzhshch/vwumumu/vchzhshch001',
         'chzhshch/vwumumu/vchzhshch002',
         'chzhshch/vwumumu/vchzhshch003',
         'chzhshch/vwumumu/vchzhshch004',
