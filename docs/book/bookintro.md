@@ -92,6 +92,41 @@ title: '书单'
 
 ### 《沟通的方法》
 
+### 《权力的转移》
+
+- 作者：阿尔文·托夫勒（Alvin Toffler）
+- 原作名：Power Shift
+- ISBN：9787508684482
+
+### 《政治秩序的起源》
+
+- 作者：弗朗西斯·福山
+- 副标题：从前人类时代到法国大革命
+- 原作名：The Origins of Political Order: From Prehuman Times to the French Revolution
+- ISBN：9787549555116
+
+### 《The Changing World Order》
+
+- 作者：Ray Dalio
+- 副标题：Why Nations Succeed and Fail
+- ISBN：9781982160272
+
+### 《The world after capital》
+https://worldaftercapital.gitbook.io/worldaftercapital/
+
+### 《The Dawn of Everything》
+
+- 作者：David Graeber / David Wengrow
+- 副标题：A New History of Humanity
+- ISBN：9780374157357
+
+### 《The Age of AI》
+
+- 作者：Henry A. Kissinger / Eric Schmidt / Daniel Huttenlocher
+- 副标题: And Our Human Future
+- ISBN: 9781529375978
+
+
 ## 已读：
 ### 《动物庄园》
 
