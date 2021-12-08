@@ -627,11 +627,112 @@ let fn = function(){}
 
 * arguments（除了箭头函数）
 
-每个函数都有，除了箭头函数
-
-
+每个函数都有，除了箭头函数。
+arguments是一个包含所有参数的伪数组，通过array.from()，可以将其变成数组。
+为什么说arguments是一个伪数组，因为其有0，1，2...这样的下标，还有length。
 
 * this（除了箭头函数）
+
+```js
+function fn(){
+    console.log(this)
+}
+
+fn()
+```
+如果不给fn这个函数任何参数，则this默认为小写的window全局变量。
+
+可以通过call的方式给this传参数：
+fn.call(1)
+如果给this传的不是一个对象，js会自动帮忙封装成一个对象。
+
+如果想不让js帮忙封装，而是传什么就是什么：
+需要加：'use strict'
+```js
+function fn(){
+    'use strict'
+    console.log(this)
+}
+
+fn()
+```
+* this 和 arguments
+
+对于函数，通过call的方式传参数，传入的第一个参数就是this，其他的参数是arguments：
+```js
+function fn(){
+    console.log(this)
+    console.log(arguments)
+}
+
+
+fn.call(1,2,3,4)
+  Number {1}
+  Arguments(3) [2, 3, 4, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+```
+
+* 为什么要有this?
+
+```JS
+class Person{
+    constructor(name){
+        this.name = name
+    }
+    sayHi(){
+        console.log(???)
+    }
+}
+```
+我在写Person这个类的时候，有一个method叫sayHi()，我还不知道通过Person类创建的对象叫什么，所以，我就不知道该对谁sayHi
+
+这就是为什么要有this，来解决对未知函数的引用问题。
+
+
+* this如何解决引用未知参数的问题
+```js
+let person = {
+    name:'frank'
+    sayHi(/*this*/){
+        console.log('Hi, may name is' + this.name)
+    }
+}
+```
+person.sayHi()
+相当于：
+person.sayHi(person)
+然后，person传给了sayHi()中的this
+于是最后，console.log打印了person.name即frank。
+
+* js调用this的两种方式
+
+小白：
+person.sayHi()
+自动把person传给this
+
+大师：
+person.sayHi.call(person)
+通过call，指定把谁传给this
+
+* 绑定this
+
+使用.bind可以让this不被改变
+```JS
+使用.bind可以让this不被改变
+function f1(p1,p2){
+    console.log(this,p1,p2)
+}
+let f2 = f1.bind({name:'frank'}) //那么f2就是f1绑定了this之后的新函数
+f2()  //等价于f1.call({name:'frank'})
+
+.bind还可以绑定其他参数
+let f3 = f1.bind({name:'frank'}, 'hi')
+f3() //等价于f1.call({name:'frank'},hi)
+```
+使用f1时，需要提供3个参数，this，p1和p2，即：
+f1.call(this,p1,p2)
+这时，用f3实现f1就可以:
+f3(p2),因为this，p1已经提前绑定
+
 
 ---12/08/2021---
 
