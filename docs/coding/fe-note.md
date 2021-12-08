@@ -274,10 +274,14 @@ slice，截取数组的一部分，arr.slice(1) //从第二个元素开始截取
 在js中，函数也是一个对象
 
 * 定义一个函数
+
+```js
 function fn(x,y){return x+y}
 let fn2 = function fn(x,y){return x+y}
 let fn = (x,y) => x+y
 let fn = new Function('x','y','return x+y')
+```
+
 
 * 函数对象的重要自身属性
 
@@ -300,15 +304,19 @@ window.Function是由浏览器构造Function，然后指定它的构造者是自
 
 * 新建
 
+```js
 let arr = [1, 2, 3]
 let arr = new Array(1,2,3)
 let arr = new Array(3)
+```
 
 * 转化
 
+```js
 let arr = '1,2,3'.split(',')
 let arr = '123'.split('')
 Array.from('123')
+```
 
 * 伪数组
 
@@ -321,38 +329,52 @@ Array.from('123')
 只有长度，没有内容，叫稀疏数组。
 
 正确的删除数组元素的方法应该使用数组的相关方法去删：
+
+```js
 arr.shift() //删开头
 arr.pop()  //删结尾
 arr.splice(index,1)  //删除index的一个元素
 arr.splice(index,1,'x')  //删除index的一个元素，并在同一个位置添加'x'
 arr.splice(index,1,'x','y')  //同上，添加'x','y'
+```
 
 * 查
 
 对象的方法对数组都可以用，但是很多时候不适用，比如伪数组，即数组里面有个属性的名不是数字，比如是x
 
-for(let key in arr){console.log(`${key}:${arr[key]}`)},这种方式，会把x也便利出来。
+```js
+for(let key in arr){console.log(`${key}:${arr[key]}`)} //这种方式，会把x也便利出来。
+```
 
 可以通过限制便利数字，达到输出数组的目的：
 
+```js
 for(let i = 0; i < arr.length; i++){
     console.log(`${i}:${[i]}`)
 }
+```
 
 也可以直接使用数组的forEach方法：
+```js
 arr.forEach(function(xxx){console.log(xxx)})  //只打印数组的值
 arr.forEach(function(xxx,yyy){console.log(`${yyy}:${xxx}`)})  //遍历数组
+```
 
 ---12/02/2021---
 ---12/03/2021---
 
 * 索引越界
+
+```js
 arr[arr.length] === undefined
+```
 
 举例：
+```js
 for(let i = 0 ; i <= arr.length; i++){
     console.log(arr[i].toString())
 }
+```
 
 因为i=arr.length时，数组的对象不存在，所以会取不到，就意味着索引超过了范围，索引越界。
 
@@ -373,31 +395,44 @@ arr.splice(index,1,'x')  //删除index的一个元素，并在同一个位置添
 arr.splice(index,1,'x','y')  //同上，添加'x','y'
 
 * 排序：
+
+```js
 arr.sort((a,b) => a.score - b.score) //从小到大
+```
 
 * 数组变换
 
 * map n变n
 
+```js
 let arr = [1,2,3,4,5,6]
 arr.map(item => item*item)  //告诉map，怎么变arr中的item
+```
 
 * filter n变少
 
+```js
 let arr = [1,2,3,4,5,6]
 arr.filter(item => item%2 === 0 ? true : false)
+```
 可以简写成：
+```js
 arr.filter(item => item%2 === 0) 即，返回结果为true的元素
+```
 
 * reduce n变1
 
+```js
 let arr = [1,2,3,4,5,6]
 arr.reduce((sum, item)=>{return sum + item},0)
+```
 
 * reduce 实现map
 
+```js
 let arr = [1,2,3,4,5,6]
 arr.reduce((bucket,item)=>{return bucket.concat(item*item)},[])
+```
 
 * reduce 实现filter
 
@@ -406,6 +441,199 @@ let arr = [1,2,3,4,5,6]
 arr.reduce((result,item)=> item % 2 === 1 ? result: result.concat(item),[])
 arr.reduce((result,item)=> result.concat(item%2===1?[]:item),[])  //更简洁优美的上一行的美化
 ```
+---12/03/2021---
+---12/05/2021---
+
+## 函数
+
+* 具名函数
+
+标准，最常用的函数：
+```js
+function 函数名（形式参数1，形式参数2）{
+    语句
+    return 返回值
+}
+```
+
+* 匿名函数
+具名函数，去掉函数名就是匿名函数
+
+通常
+```js
+let a = function(x,y){return x + y}
+```
+
+=等号右边也叫函数表达式
+
+=号右边的函数的作用域只在=右边，不是全局变量，比如：
+```js
+let a = function fn(x,y)(return x + y)
+```
+fn(a,b),就会报错。
+
+* 箭头函数
+
+如果想直接返回一个对象，需要在对象的两端加括号：
+
+```js
+let f4 = x => ({name:x})
+```
+
+* 构造函数
+
+基本没人用
+```js
+let fn1 = new Function('x','y','console.log(\'hi\');return x+y')
+```
+
+* 函数的要素：
+* 调用时机：
+例1:
+```js
+let a = 1
+function fn(){
+    console.log(a)
+}
+
+a = 2
+
+fn()
+```
+答案是2
+
+例2:
+```js
+let a = 1
+function fn(){
+    console.log(a)
+}
+
+fn()
+
+a = 2
+```
+答案是1
+
+例3:
+```js
+let a = 1
+function fn(){
+    setTimeout(()=>{
+        console.log(a)
+    },0)
+}
+
+fn()
+a = 2
+```
+答案是2
+
+例4:
+```js
+let i = 0 
+for(i = 0; i < 6; i++>){
+    setTimeout(()=>{
+        console.log(i)
+    },0)
+}
+```
+答案是6个6
+
+例5:
+```js
+for(let i = 0; i < 6; i++>){
+    setTimeout(()=>{
+        console.log(i)
+    },0)
+}
+```
+答案是0/1/2/3/4/5
+因为js在for和let一起用的时候会加东西
+每次循环会多创建一个i
+
+
+---12/05/2021---
+
+---12/08/2021---
+
+* 全局变量 vs 局部变量
+
+在函数里声明的变量是局部变量
+全局变量有两种：
+1.在顶级作用域声明的变量，就是在一开始，最外面声明的变量
+2.window.c = 1, 通过window声明的变量，通过window声明的变量，不需要在最外面声明，在函数里也可以。
+
+* 作用域规则
+
+如果多个作用域有同名变量a
+那么查找a的声明时，就向上取最近的作用域
+简称就近原则
+查找a的过程与函数执行无关
+但a的值与函数执行有关
+
+* 闭包
+
+```js
+function f1(){
+    let a = 1
+    function f2(){
+        let a = 2
+        function f3(){
+            console.log(a)
+        }
+        a = 22
+        f3()
+    } 
+    console.log(a)
+    a = 100
+    f2()
+}
+```
+f3函数用了外部变量a = 2，这就叫闭包。 a=2和f3组成了闭包。
+
+* 调用栈
+
+js引擎在调用一个函数前，需要把函数所在的环境push到一个数组里，这个数组叫做调用栈。
+因为每次计算到内部的时候，拿到结果后需要返回给上一步运算，这就需要知道该返回到什么地方，调用栈就是用来保存该回到哪个环境的地方。
+
+* 递归 爆栈
+
+先递进，再回归。
+
+爆栈就是超过程序提供的最大压栈量。
+
+* 函数提升
+
+function fn(){}
+不管把具名函数声明在哪里，都会跑到第一行。
+比如：
+```js
+add(1,2)
+function add(x, y){
+    return x + y
+}
+```
+运行不会报错，因为add是一个具名函数，会被提升到add(1, 2)的前面。
+
+* 什么不是函数提升
+
+let fn = function(){}
+这是赋值，右边的匿名函数声明不会提升。
+
+* js三座大山
+
+搞定就可以搞vue,react,anjula了
+
+* arguments（除了箭头函数）
+
+每个函数都有，除了箭头函数
+
+
+
+* this（除了箭头函数）
+
+---12/08/2021---
 
 
 ## 代码规范
