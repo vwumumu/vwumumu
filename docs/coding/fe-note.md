@@ -754,6 +754,76 @@ f3(p2),因为this，p1已经提前绑定
 新版的语法，直接使用{}+let就可以得到一个局部变量。
 
 
+## js运算符
+
+* 短路逻辑
+
+console && console.log && console.log('hi')
+从前向后依次检查满足才执行console.log('hi')
+
+这称为防御性编程，防止报错。
+
+最新的语法，可以简写成：
+console?.log?('hi')
+这叫做，可选链语法。
+
+用||链接，可以起到设定保底值的作用：
+a = a || 100
+a保底为100
+
+
+## DOM编程
+
+网页上的元素就像一棵树，js如何操作这棵树？
+
+浏览器在window上加了一个document，以此衍生出整棵树。
+
+window.document就可以看到这棵树。
+
+这就是Document Object Model（DOM）文档对象模型
+
+### 获取页面上的元素
+
+* 直接通过id获取元素
+如果一个元素有id，可以直接通过window.id获取，甚至直接输入id获取到该元素。
+比如：baidu的搜索框，在console中输入window.kw或者直接kw就能获取到搜索框这个元素。
+
+* document.getElementById('idxxx') 比如：
+```js
+document.getElementById('kw')
+```
+
+* document.getElemenetsByTagName('div')[0]
+获取所有的Tag为div的元素，取第一个，因为直接得到的结果是一个伪数组，通过[0]拿到第一个。
+
+* document.getElementsByClassName('red')[0]
+获取所有的类为red的元素，取第一个。
+
+> 上面的3个永远不要用，只有在需要兼容ie的时候才需要用。
+> 工作中用：querySelector和querySelectorAll
+
+* document.querySelector('#idxxx')
+获取id为xxx的元素。
+
+* document.querySelectorAll('red')[0]
+选择class为red的所有元素，并选择第一个元素。
+
+* 获取特定的页面元素
+
+document.documentElement  //获取html标签
+
+document.head  //获取head
+
+document.body  //获取body
+
+window  //获取当前窗口，窗口不是元素，但是会有用，比如监听当前窗口的onclick事件
+比如：window.onclick = ()=>{console.log('hi')}
+
+
+
+
+
+
 ## 代码规范
 
 * 大小写
