@@ -819,6 +819,123 @@ document.body  //获取body
 window  //获取当前窗口，窗口不是元素，但是会有用，比如监听当前窗口的onclick事件
 比如：window.onclick = ()=>{console.log('hi')}
 
+document.all  //获取所有元素，第6个false值, IE发明的。
+
+---12/09/2021---
+---12/10/2021---
+
+* 通过div的原型一层层看结构
+
+div.__proto__ > HTMLDivElement > HTMLElement > Element > Node > EventTarget > Object
+
+* EvetTarget的属性
+addEventListener
+dispatchEvent
+removeEventListener
+
+* Node的类型
+
+https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeType
+
+* Node的增:
+* 创建一个标签节点：
+let div1 = document.createElement('div')
+document.createElement('style')
+document.createElement('script')
+document.createElement('li')
+
+* 创建一个文本节点：
+text1 = document.createTextNode('你好')
+
+* 标签里插入文本
+div1.appendChild(text1)  //用到了前面创建的div1和text1
+
+比较简单的方式：
+div1.innerText='你好' 或者 div.textContent='你好'
+但是不能用div1.appendChild('你好')
+
+* 插入页面中
+
+通过上面的方式创建的元素默认处于js线程中
+必须把它插入到head或者body里面，才会生效
+document.body.appendChild(div)  //append in body element
+or
+an exist element.appendChild(div)  //append in an exist element which is displaying in body
+
+* clone element
+div2 = div1.cloneNode(true)  //paramater true means deep copy
+as appendChild only working for the last time. we need to use cloneNode to creat a same element if we need to append an element in more than 1 element.
+
+* Node Delete:
+* two methods
+1st: parentNode.childChild(childNode)  //delete node from parent node
+
+e.g.:
+div1.parentNode.removeChild(div1)
+
+div1 can be add again after remove, it means the element was removed from the document tree, but in memory.
+
+2nd: childNode.remove()  //ie not support
+
+e.g.:
+div2.remove()
+as 1st method, div2 can be added with appendChild(div2), it will be remove from memory if set a null to variable div2
+
+* Node改属性:
+* 写标准属性
+改class: div.className = 'red blue'  //注意，使用className，不能用class，因为class是保留字
+
+改class: div.classList.add('red')  //加一个class
+
+改style: div.style = 'width:100px; color:blue;'
+
+改style的一部分: div.style.width = '200px'
+
+大小写： div.style.backgroundColor = 'white'  //对于带中划线的属性，比如：background-color，改写属性值就比较麻烦，需要通过div2.style['background-color']的方式改，比较简单的方式是：把-c变成大写C
+
+改data-* 属性：div.dataset.x='frank' //可以给一个元素自定义属性data-x，可以通过dataset.x修改这个自定义属性。
+
+* 读标准属性
+div.classList
+div.getAttribute('class')
+两种方法都可以，但是getAttribute会获取到原原本本的属性，比如对于a标签，使用相对路径/，通过a.href读出来，可能会被加上站点的域名。
+
+e.g.
+console.log(test.href)  //'http://www.baidu.com/xxx'
+console.log(test.getAttribute('href'))  //'/xxx'
+
+* 改事件处理属性：
+* div.onclick默认为null
+点击div的时候，浏览器就会调用这个函数
+并且是这样调用的fn.call(div, event)
+div会被当作this传进fn
+event则包含了点击时间的所有信息
+
+* div.addEventListener
+是div.onclick的升级版
+onclick只可以写一个函数
+addEventListener可以写很多个函数
+
+### 改内容
+* 改文本内容
+div.innerText = 'xxx'
+div.textContent = 'xxx'
+
+* 改HTML内容
+div.innerHTML = `<p><strong>Hi</strong></p>`
+
+* 改标签
+div.innerHTML = '' //先清空
+div.appendChild(div2)  //再加内容
+
+* 改父节点
+
+在新节点下,把自己加进去：
+newNode.appendChild(div)
+
+
+---12/10/2021---
+
 
 
 
