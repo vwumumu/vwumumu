@@ -933,12 +933,85 @@ div.appendChild(div2)  //再加内容
 在新节点下,把自己加进去：
 newNode.appendChild(div)
 
-
 ---12/10/2021---
+---12/11/2021---
 
+### 查内容
 
+* 查自己
 
+直接输入元素名就可以，比如：
+div
+就会在console打出div
 
+* 查父节点
+
+div.parentNode
+div.parentElement
+
+* 查爷爷
+
+div.parentNode.parentNode
+
+* 查子代
+
+div.childNode   //会包含换行空格等文本节点，因为是node提供的
+div.children    //不包含文本节点，通常会获取到html的元素，因为是element提供的
+
+* 查老大
+
+div.firstChild
+
+* 查老幺
+
+div.lastChild
+
+* 查前一个
+
+div.previousSibling
+div.previousElementSibling
+
+* 查下一个
+
+div.nextSibling
+div.nextElementSibling
+
+* 遍历div中的所有元素
+
+travel = (node, fn) => {
+    fn(node)
+    if(node.children){
+        for(let i = 0; i < node.children.lenght; i++ ){
+            travel(node.children[i], fn)
+        }
+    }
+}
+travel(div1,(node) => console.log(node))
+
+### DOM跨线程操作
+
+* 插入新标签的完整过程
+在div1放入页面之前：
+你对div1的所有操作都属于js线程内的操作
+
+把div放入页面之时：
+浏览器会发现js的意图就会通知渲染线程在页面中渲染div1对应的元素
+
+把div1放入页面之后：
+你对div1的操作都又可能会触发重新渲染
+
+* 属性同步：
+标准属性：
+对div1的标准属性的修改，会被浏览器同步到页面中，比如id/className/title等
+
+data-*属性：
+同上
+
+非标准属性：
+自己瞎写的一个属性，通过js修改后，只会停留在js线程中，不会同步到页面里。
+
+启示：
+如果有自定义属性，又想通过js同步到页面中，需要使用data-作为前缀。
 
 
 ## 代码规范
@@ -954,3 +1027,13 @@ newNode.appendChild(div)
 new后面+名次
 
 其他函数，一般使用动词开头
+
+## 路线图
+
+基础：html css http
+
+js > dom > 封装api > mvc > vue2 > react > vue3 > 小程序 > flutter
+
+
+
+---12/11/2021---
