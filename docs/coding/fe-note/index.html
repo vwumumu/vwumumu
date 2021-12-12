@@ -6,8 +6,8 @@
 <meta name="generator" content="Docusaurus v2.0.0-beta.10">
 <link rel="alternate" type="application/rss+xml" href="/vwumumu/blog/rss.xml" title="Mumu Wu RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/vwumumu/blog/atom.xml" title="Mumu Wu Atom Feed"><title data-react-helmet="true">前端学习笔记 | Mumu Wu</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:url" content="https://vwumumu.github.io/vwumumu/docs/coding/fe-note"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="前端学习笔记 | Mumu Wu"><meta data-react-helmet="true" name="description" content="---11/28/2021---"><meta data-react-helmet="true" property="og:description" content="---11/28/2021---"><link data-react-helmet="true" rel="icon" href="/vwumumu/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://vwumumu.github.io/vwumumu/docs/coding/fe-note"><link data-react-helmet="true" rel="alternate" href="https://vwumumu.github.io/vwumumu/docs/coding/fe-note" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://vwumumu.github.io/vwumumu/docs/coding/fe-note" hreflang="x-default"><link rel="stylesheet" href="/vwumumu/assets/css/styles.747e401f.css">
-<link rel="preload" href="/vwumumu/assets/js/runtime~main.e2377ccd.js" as="script">
-<link rel="preload" href="/vwumumu/assets/js/main.fc0dc98b.js" as="script">
+<link rel="preload" href="/vwumumu/assets/js/runtime~main.5453fb9c.js" as="script">
+<link rel="preload" href="/vwumumu/assets/js/main.cf5b31aa.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -82,8 +82,103 @@ a保底为100</p><h2 class="anchor anchorWithStickyNavbar_31ik" id="dom编程">D
 工作中用：querySelector和querySelectorAll</p></blockquote><ul><li><p>document.querySelector(&#x27;#idxxx&#x27;)
 获取id为xxx的元素。</p></li><li><p>document.querySelectorAll(&#x27;red&#x27;)<!-- -->[0]<!-- -->
 选择class为red的所有元素，并选择第一个元素。</p></li><li><p>获取特定的页面元素</p></li></ul><p>document.documentElement  //获取html标签</p><p>document.head  //获取head</p><p>document.body  //获取body</p><p>window  //获取当前窗口，窗口不是元素，但是会有用，比如监听当前窗口的onclick事件
-比如：window.onclick = ()=&gt;{console.log(&#x27;hi&#x27;)}</p><h2 class="anchor anchorWithStickyNavbar_31ik" id="代码规范">代码规范<a aria-hidden="true" class="hash-link" href="#代码规范" title="Direct link to heading">​</a></h2><ul><li>大小写</li></ul><p>所有构造函数首字母大写</p><p>所有被构造出来的对象，首字母小写</p><ul><li>词性</li></ul><p>new后面+名次</p><p>其他函数，一般使用动词开头</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/edit/main/website/docs/coding/fe-note.md" target="_blank" rel="noreferrer noopener" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_2_ui" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_13-_"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/vwumumu/docs/coding/useful-js"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« <!-- -->有用的JS代码段</div></a></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#数据类型" class="table-of-contents__link toc-highlight">数据类型</a><ul><li><a href="#七种数据类型" class="table-of-contents__link toc-highlight">七种数据类型</a></li><li><a href="#五个falsy值" class="table-of-contents__link toc-highlight">五个Falsy值</a></li></ul></li><li><a href="#对象" class="table-of-contents__link toc-highlight">对象</a></li><li><a href="#数组" class="table-of-contents__link toc-highlight">数组</a></li><li><a href="#函数" class="table-of-contents__link toc-highlight">函数</a></li><li><a href="#数组2" class="table-of-contents__link toc-highlight">数组2</a></li><li><a href="#函数-1" class="table-of-contents__link toc-highlight">函数</a></li><li><a href="#js运算符" class="table-of-contents__link toc-highlight">js运算符</a></li><li><a href="#dom编程" class="table-of-contents__link toc-highlight">DOM编程</a><ul><li><a href="#获取页面上的元素" class="table-of-contents__link toc-highlight">获取页面上的元素</a></li></ul></li><li><a href="#代码规范" class="table-of-contents__link toc-highlight">代码规范</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">文档</div><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/chzhshch/chzhshchintro">缠论</a></li><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/book/bookintro">读书</a></li><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/coding/codingintro">编程</a></li><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/other/otherintro">其他</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div></div><div class="col footer__col"><div class="footer__title">更多</div></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2021 Mumu Wu.</div></div></div></footer></div>
-<script src="/vwumumu/assets/js/runtime~main.e2377ccd.js"></script>
-<script src="/vwumumu/assets/js/main.fc0dc98b.js"></script>
+比如：window.onclick = ()=&gt;{console.log(&#x27;hi&#x27;)}</p><p>document.all  //获取所有元素，第6个false值, IE发明的。</p><p>---12/09/2021---
+---12/10/2021---</p><ul><li>通过div的原型一层层看结构</li></ul><p>div.<strong>proto</strong> &gt; HTMLDivElement &gt; HTMLElement &gt; Element &gt; Node &gt; EventTarget &gt; Object</p><ul><li><p>EvetTarget的属性
+addEventListener
+dispatchEvent
+removeEventListener</p></li><li><p>Node的类型</p></li></ul><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeType" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeType</a></p><ul><li><p>Node的增:</p></li><li><p>创建一个标签节点：
+let div1 = document.createElement(&#x27;div&#x27;)
+document.createElement(&#x27;style&#x27;)
+document.createElement(&#x27;script&#x27;)
+document.createElement(&#x27;li&#x27;)</p></li><li><p>创建一个文本节点：
+text1 = document.createTextNode(&#x27;你好&#x27;)</p></li><li><p>标签里插入文本
+div1.appendChild(text1)  //用到了前面创建的div1和text1</p></li></ul><p>比较简单的方式：
+div1.innerText=&#x27;你好&#x27; 或者 div.textContent=&#x27;你好&#x27;
+但是不能用div1.appendChild(&#x27;你好&#x27;)</p><ul><li>插入页面中</li></ul><p>通过上面的方式创建的元素默认处于js线程中
+必须把它插入到head或者body里面，才会生效
+document.body.appendChild(div)  //append in body element
+or
+an exist element.appendChild(div)  //append in an exist element which is displaying in body</p><ul><li><p>clone element
+div2 = div1.cloneNode(true)  //paramater true means deep copy
+as appendChild only working for the last time. we need to use cloneNode to creat a same element if we need to append an element in more than 1 element.</p></li><li><p>Node Delete:</p></li><li><p>two methods
+1st: parentNode.childChild(childNode)  //delete node from parent node</p></li></ul><p>e.g.:
+div1.parentNode.removeChild(div1)</p><p>div1 can be add again after remove, it means the element was removed from the document tree, but in memory.</p><p>2nd: childNode.remove()  //ie not support</p><p>e.g.:
+div2.remove()
+as 1st method, div2 can be added with appendChild(div2), it will be remove from memory if set a null to variable div2</p><ul><li>Node改属性:</li><li>写标准属性
+改class: div.className = &#x27;red blue&#x27;  //注意，使用className，不能用class，因为class是保留字</li></ul><p>改class: div.classList.add(&#x27;red&#x27;)  //加一个class</p><p>改style: div.style = &#x27;width:100px; color:blue;&#x27;</p><p>改style的一部分: div.style.width = &#x27;200px&#x27;</p><p>大小写： div.style.backgroundColor = &#x27;white&#x27;  //对于带中划线的属性，比如：background-color，改写属性值就比较麻烦，需要通过div2.style<!-- -->[&#x27;background-color&#x27;]<!-- -->的方式改，比较简单的方式是：把-c变成大写C</p><p>改data-* 属性：div.dataset.x=&#x27;frank&#x27; //可以给一个元素自定义属性data-x，可以通过dataset.x修改这个自定义属性。</p><ul><li>读标准属性
+div.classList
+div.getAttribute(&#x27;class&#x27;)
+两种方法都可以，但是getAttribute会获取到原原本本的属性，比如对于a标签，使用相对路径/，通过a.href读出来，可能会被加上站点的域名。</li></ul><p>e.g.
+console.log(test.href)  //&#x27;<a href="http://www.baidu.com/xxx&#x27;" target="_blank" rel="noopener noreferrer">http://www.baidu.com/xxx&#x27;</a>
+console.log(test.getAttribute(&#x27;href&#x27;))  //&#x27;/xxx&#x27;</p><ul><li><p>改事件处理属性：</p></li><li><p>div.onclick默认为null
+点击div的时候，浏览器就会调用这个函数
+并且是这样调用的fn.call(div, event)
+div会被当作this传进fn
+event则包含了点击时间的所有信息</p></li><li><p>div.addEventListener
+是div.onclick的升级版
+onclick只可以写一个函数
+addEventListener可以写很多个函数</p></li></ul><h3 class="anchor anchorWithStickyNavbar_31ik" id="改内容">改内容<a aria-hidden="true" class="hash-link" href="#改内容" title="Direct link to heading">​</a></h3><ul><li><p>改文本内容
+div.innerText = &#x27;xxx&#x27;
+div.textContent = &#x27;xxx&#x27;</p></li><li><p>改HTML内容
+div.innerHTML = <code>&lt;p&gt;&lt;strong&gt;Hi&lt;/strong&gt;&lt;/p&gt;</code></p></li><li><p>改标签
+div.innerHTML = &#x27;&#x27; //先清空
+div.appendChild(div2)  //再加内容</p></li><li><p>改父节点</p></li></ul><p>在新节点下,把自己加进去：
+newNode.appendChild(div)</p><p>---12/10/2021---
+---12/11/2021---</p><h3 class="anchor anchorWithStickyNavbar_31ik" id="查内容">查内容<a aria-hidden="true" class="hash-link" href="#查内容" title="Direct link to heading">​</a></h3><ul><li>查自己</li></ul><p>直接输入元素名就可以，比如：
+div
+就会在console打出div</p><ul><li>查父节点</li></ul><p>div.parentNode
+div.parentElement</p><ul><li>查爷爷</li></ul><p>div.parentNode.parentNode</p><ul><li>查子代</li></ul><p>div.childNode   //会包含换行空格等文本节点，因为是node提供的
+div.children    //不包含文本节点，通常会获取到html的元素，因为是element提供的</p><ul><li>查老大</li></ul><p>div.firstChild</p><ul><li>查老幺</li></ul><p>div.lastChild</p><ul><li>查前一个</li></ul><p>div.previousSibling
+div.previousElementSibling</p><ul><li>查下一个</li></ul><p>div.nextSibling
+div.nextElementSibling</p><ul><li>遍历div中的所有元素</li></ul><p>travel = (node, fn) =&gt; {
+fn(node)
+if(node.children){
+for(let i = 0; i &lt; node.children.lenght; i++ ){
+travel(node.children<!-- -->[i]<!-- -->, fn)
+}
+}
+}
+travel(div1,(node) =&gt; console.log(node))</p><h3 class="anchor anchorWithStickyNavbar_31ik" id="dom跨线程操作">DOM跨线程操作<a aria-hidden="true" class="hash-link" href="#dom跨线程操作" title="Direct link to heading">​</a></h3><ul><li>插入新标签的完整过程
+在div1放入页面之前：
+你对div1的所有操作都属于js线程内的操作</li></ul><p>把div放入页面之时：
+浏览器会发现js的意图就会通知渲染线程在页面中渲染div1对应的元素</p><p>把div1放入页面之后：
+你对div1的操作都又可能会触发重新渲染</p><ul><li>属性同步：
+标准属性：
+对div1的标准属性的修改，会被浏览器同步到页面中，比如id/className/title等</li></ul><p>data-*属性：
+同上</p><p>非标准属性：
+自己瞎写的一个属性，通过js修改后，只会停留在js线程中，不会同步到页面里。</p><p>启示：
+如果有自定义属性，又想通过js同步到页面中，需要使用data-作为前缀。</p><h2 class="anchor anchorWithStickyNavbar_31ik" id="代码规范">代码规范<a aria-hidden="true" class="hash-link" href="#代码规范" title="Direct link to heading">​</a></h2><ul><li>大小写</li></ul><p>所有构造函数首字母大写</p><p>所有被构造出来的对象，首字母小写</p><ul><li>词性</li></ul><p>new后面+名次</p><p>其他函数，一般使用动词开头</p><h2 class="anchor anchorWithStickyNavbar_31ik" id="路线图">路线图<a aria-hidden="true" class="hash-link" href="#路线图" title="Direct link to heading">​</a></h2><p>基础：html css http</p><p>js &gt; dom &gt; 封装api &gt; mvc &gt; vue2 &gt; react &gt; vue3 &gt; 小程序 &gt; flutter</p><h2 class="anchor anchorWithStickyNavbar_31ik" id="封装dom">封装DOM<a aria-hidden="true" class="hash-link" href="#封装dom" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_31ik" id="以类的形式写">以类的形式写<a aria-hidden="true" class="hash-link" href="#以类的形式写" title="Direct link to heading">​</a></h3><p>// index.html引入</p><script src="dom.js"></script><script src="main.js"></script><p>//  main.js
+dom.create //通过dom.调用</p><p>// dom.js
+window.dom = {
+create(){},
+after(){},
+}</p><h3 class="anchor anchorWithStickyNavbar_31ik" id="重载">重载<a aria-hidden="true" class="hash-link" href="#重载" title="Direct link to heading">​</a></h3><p>同一个api，根据参数数量的不同，提供不同的功能：
+attr(node, name, value){
+if(arguments.length === 3){
+node.setAttribute(name, value)
+}else if(arguments.length === 2){
+node.getAttribute(name)
+}
+}</p><h3 class="anchor anchorWithStickyNavbar_31ik" id="适配">适配<a aria-hidden="true" class="hash-link" href="#适配" title="Direct link to heading">​</a></h3><p>针对不同的浏览器，执行不同的代码
+text(node, string){
+if(&#x27;innerText&#x27; in node){
+node.innerText = string
+}else{
+node.textContent = string
+}
+}</p><h3 class="anchor anchorWithStickyNavbar_31ik" id="做带二级分类命令的api">做带二级分类命令的api<a aria-hidden="true" class="hash-link" href="#做带二级分类命令的api" title="Direct link to heading">​</a></h3><p>比如：dom.class.add</p><p>class:{
+add(){</p><div class="codeBlockContainer_K1bP"><div class="codeBlockContent_hGly"><pre tabindex="0" class="prism-code language-undefined codeBlock_23N8 thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_39YC"><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_Ue-o clean-btn">Copy</button></div></div><p>}</p><h3>||</h3><p>在scope中查找，如果scope没有，到document中查找。</p><p>find(){
+return (scope || document).querySelectorAll(selector)
+}</p><h3 class="anchor anchorWithStickyNavbar_31ik" id="获取siblings">获取siblings<a aria-hidden="true" class="hash-link" href="#获取siblings" title="Direct link to heading">​</a></h3><p>siblings(node){
+return Array.from(node.parentNode.children).filter(n=&gt;n!==node)
+}</p><h3 class="anchor anchorWithStickyNavbar_31ik" id="跳过文本节点">跳过文本节点<a aria-hidden="true" class="hash-link" href="#跳过文本节点" title="Direct link to heading">​</a></h3><p>next(node){
+let x = node.nextSibling
+while(x &amp;&amp; x.nodeType === 3){
+x = x.nextSibling
+}
+return x
+}</p><p>---12/11/2021---</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/edit/main/website/docs/coding/fe-note.md" target="_blank" rel="noreferrer noopener" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_2_ui" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_13-_"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/vwumumu/docs/coding/useful-js"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« <!-- -->有用的JS代码段</div></a></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#数据类型" class="table-of-contents__link toc-highlight">数据类型</a><ul><li><a href="#七种数据类型" class="table-of-contents__link toc-highlight">七种数据类型</a></li><li><a href="#五个falsy值" class="table-of-contents__link toc-highlight">五个Falsy值</a></li></ul></li><li><a href="#对象" class="table-of-contents__link toc-highlight">对象</a></li><li><a href="#数组" class="table-of-contents__link toc-highlight">数组</a></li><li><a href="#函数" class="table-of-contents__link toc-highlight">函数</a></li><li><a href="#数组2" class="table-of-contents__link toc-highlight">数组2</a></li><li><a href="#函数-1" class="table-of-contents__link toc-highlight">函数</a></li><li><a href="#js运算符" class="table-of-contents__link toc-highlight">js运算符</a></li><li><a href="#dom编程" class="table-of-contents__link toc-highlight">DOM编程</a><ul><li><a href="#获取页面上的元素" class="table-of-contents__link toc-highlight">获取页面上的元素</a></li><li><a href="#改内容" class="table-of-contents__link toc-highlight">改内容</a></li><li><a href="#查内容" class="table-of-contents__link toc-highlight">查内容</a></li><li><a href="#dom跨线程操作" class="table-of-contents__link toc-highlight">DOM跨线程操作</a></li></ul></li><li><a href="#代码规范" class="table-of-contents__link toc-highlight">代码规范</a></li><li><a href="#路线图" class="table-of-contents__link toc-highlight">路线图</a></li><li><a href="#封装dom" class="table-of-contents__link toc-highlight">封装DOM</a><ul><li><a href="#以类的形式写" class="table-of-contents__link toc-highlight">以类的形式写</a></li><li><a href="#重载" class="table-of-contents__link toc-highlight">重载</a></li><li><a href="#适配" class="table-of-contents__link toc-highlight">适配</a></li><li><a href="#做带二级分类命令的api" class="table-of-contents__link toc-highlight">做带二级分类命令的api</a></li><li><a href="#" class="table-of-contents__link toc-highlight">||</a></li><li><a href="#获取siblings" class="table-of-contents__link toc-highlight">获取siblings</a></li><li><a href="#跳过文本节点" class="table-of-contents__link toc-highlight">跳过文本节点</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">文档</div><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/chzhshch/chzhshchintro">缠论</a></li><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/book/bookintro">读书</a></li><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/coding/codingintro">编程</a></li><li class="footer__item"><a class="footer__link-item" href="/vwumumu/docs/other/otherintro">其他</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div></div><div class="col footer__col"><div class="footer__title">更多</div></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2021 Mumu Wu.</div></div></div></footer></div>
+<script src="/vwumumu/assets/js/runtime~main.5453fb9c.js"></script>
+<script src="/vwumumu/assets/js/main.cf5b31aa.js"></script>
 </body>
 </html>
