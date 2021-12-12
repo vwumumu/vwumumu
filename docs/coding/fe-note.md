@@ -1035,5 +1035,77 @@ new后面+名次
 js > dom > 封装api > mvc > vue2 > react > vue3 > 小程序 > flutter
 
 
+## 封装DOM
+
+### 以类的形式写
+// index.html引入
+<script src='dom.js'></script>
+<script src='main.js'></script>
+
+//  main.js
+dom.create //通过dom.调用
+
+// dom.js
+window.dom = {
+    create(){},
+    after(){},
+}
+
+### 重载
+
+同一个api，根据参数数量的不同，提供不同的功能：
+attr(node, name, value){
+    if(arguments.length === 3){
+        node.setAttribute(name, value)
+    }else if(arguments.length === 2){
+        node.getAttribute(name)
+    }
+}
+
+### 适配
+
+针对不同的浏览器，执行不同的代码
+text(node, string){
+    if('innerText' in node){
+        node.innerText = string
+    }else{
+        node.textContent = string
+    }
+}
+
+### 做带二级分类命令的api
+
+比如：dom.class.add
+
+class:{
+    add(){
+
+    }
+}
+
+### ||
+
+在scope中查找，如果scope没有，到document中查找。
+
+find(){
+    return (scope || document).querySelectorAll(selector)
+}
+
+### 获取siblings
+
+siblings(node){
+    return Array.from(node.parentNode.children).filter(n=>n!==node)
+}
+
+### 跳过文本节点
+
+next(node){
+    let x = node.nextSibling
+    while(x && x.nodeType === 3){
+        x = x.nextSibling
+    }
+    return x
+}
+
 
 ---12/11/2021---
