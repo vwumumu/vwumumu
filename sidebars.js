@@ -196,6 +196,7 @@ const sidebars = {
   otherSidebar: [
     'other/otherintro',
     'other/multiple-git-ssh',
+    'other/indicator-setting',
   ],
 };
 
