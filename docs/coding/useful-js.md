@@ -21,3 +21,8 @@ $tabBar.on("click", "li", e => {
         .siblings().removeClass('active')
 });
 ```
+
+# 从Binance获取BTC价格
+fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT')
+.then(r => r.json()
+.then(j => console.log(parseFloat(j.price).toFixed(2))));
