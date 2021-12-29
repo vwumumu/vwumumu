@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch066'
+id: 'vchzhshch066'
 title: '066.教你炒股票13：不带套的操作不是好操作！'
 ---
 

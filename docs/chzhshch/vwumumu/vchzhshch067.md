@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch067'
+id: 'vchzhshch067'
 title: '067.教你炒股票14：喝茅台的高潮程序！'
 ---
 

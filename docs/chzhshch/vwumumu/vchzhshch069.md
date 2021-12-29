@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch069'
+id: 'vchzhshch069'
 title: '069.就某酒类股票对所有散户的严重提示!'
 ---
 
