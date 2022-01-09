@@ -1109,3 +1109,451 @@ next(node){
 
 
 ---12/11/2021---
+---12/21/2021---
+
+### 链式操作
+
+```js
+window.jQuery = function(selector){
+    const elements = document.querySelectorAll(selector)
+    const api = {
+        addClass(className){
+            for(let i = 0; i < elements.length; i++){
+                elements[i].classList.add(className)
+            }
+            return api
+        }
+    }
+    return api
+}
+```
+
+在addClass中return api，以实现链式引用。
+
+最终简化的代码为：
+
+```js
+window.jQuery = function(selector){
+    const elements = document.querySelectorAll(selector)
+    return {
+        addClass(className){
+            for(let i = 0; i < elements.length; i++){
+                elements[i].classList.add(className)
+            }
+            return this
+        }
+    }
+}
+```
+
+### jQuery对象代指jQuery函数构造出来的对象
+
+### DOM事件模型
+
+```js
+<div class='ye'>
+    <div class='ba'>
+        <div class='er'>
+        wenzi
+        </div>
+    </div>
+</div>
+```
+
+点击wenzi，算不算点击er？ba？ye？，都算。
+
+点击wenzi，最先调用ye？ba？er？，都行。ie5先调er，其他先调ye。
+
+从外向内找监听函数叫事件捕获；
+从内向外找监听函数叫事件冒泡。
+
+### addEventListener
+
+事件绑定api
+ie5: baba.attachEvent('onclick',fn)  //冒泡
+网景：baba.addEventListener('click',fn)  //捕获
+W3C： baba.addEventListener('click',fn,bool)
+
+不指定bool，则默认冒泡，如果填true，则为捕获。
+
+### 取消冒泡
+
+e.stopPropagation()可中断冒泡，浏览器不再向上走。
+
+所有冒泡皆可取消，默认动作有的可以取消有的不能取消。
+Cancelable是用来取消默认动作的。
+
+### 阻止滚动
+
+x.addEventListener('wheel',(e)=>{
+    e.preventDefault()
+})
+
+x.addEventListener('touchstart',(e)=>{
+    e.preventDefault()
+})
+
+通过阻止wheel和touchstart阻止滚动。注意，需要找到滚动条所在的元素。
+但是滚动条还能用，用css让滚动条的宽度变为0
+::-webkit-scrollbar {
+    width:0 !important
+}
+
+### target和currentTarget
+
+一个是用户点击的，一个是开发者监听的。
+
+### 自定义事件
+
+const event = new CustomerEvent('frank',{
+    detail: (name:'frank', age:18)
+    bubbles: true,
+    cancelable: false
+})
+button1.dispatchEvent(event)
+
+## AJAX
+
+Async JavaScript And XML.
+AJAX的全部就是：用JS发请求和收响应
+
+### nodejs中读取html，js等
+
+```js
+var fs = require('fs')  //需要用到fs模块
+
+if(path === '/index.html'){
+    response.statusCode = 200
+    response.setHeader('Content-Type', 'text/html;charset=utf-8')
+    response.write(fs.readFileSync('public/index.html'))  //通过fs.readFileSync('文件路径')使nodejs读取独立的文件
+    response.end()
+```
+
+### 使用AJAX请求CSS
+
+4步：
+1.创建XMLHttpRequest对象
+2.调用对象的open方法
+3.监听对象的onload & onerror事件
+    1）专业前端会改用onreadystatechange事件
+    2）在事件处理函数里操作CSS文件内容
+4.调用对象的send方法（发送请求）
+    1）具体代码请打开MDN用CRM大法搞定
+
+index.html
+```js
+<body>
+    <h1>AJAX demo2</h1>
+    <p>
+        <button id="getCSS">请求CSS</button>
+    </p>
+    <script src='main.js'></script>
+</body>
+```
+
+main.js:
+```js
+getCSS.onclick = () => {
+    const request = new XMLHttpRequest()
+
+    request.open('GET', '/style.css');
+
+    request.onreadystatechange = () => {
+        if (request.readyState === 4) {
+            if (request.status >= 200 && request.status < 300) { //状态吗200-300为成功
+                const style = document.createElement('style')
+                style.innerHTML = request.response
+                document.head.appendChild(style)
+            } else {
+                alert('加载失败')
+            }
+        }
+    };
+
+    request.send()
+}
+```
+
+### 使用AJAX请求JS
+
+```js
+getJS.onclick = () => {
+    const request = new XMLHttpRequest()
+
+    request.open('GET', '/2.js');
+
+    request.onload = () => {
+        const script = document.createElement('script')
+        script.innerHTML = request.response
+        document.body.appendChild(script)
+    };
+    request.onerror = () => {};
+
+    request.send()
+}
+```
+
+### 使用AJAX请求HTML
+
+```js
+getHTML.onclick = () => {
+    const request = new XMLHttpRequest()
+
+    request.open('GET', '/3.html');
+
+    request.onload = () => {
+        const div = document.createElement('div')
+        div.innerHTML = request.response
+        document.body.appendChild(div)
+    };
+    request.onerror = () => {};
+
+    request.send();
+}
+```
+
+### http请求的过程状态，readystate
+
+创建：const req = new ....  // 0
+打开：req.open()  // 1
+发送：req.send()  // 2
+第一个信息出现在浏览器：  3
+下载完成：   4
+
+### 使用AJAX请求XML
+
+```js
+getXML.onclick = () => {
+    const request = new XMLHttpRequest()
+
+    request.open('GET', '/4.xml');
+
+    request.onreadystatechange = () => {
+        if (request.readyState === 4) {
+            if (request.status >= 200 && request.status < 300) {
+                const dom = request.responseXML;
+                const text = dom.getElementsByTagName('warning')[0].textContent
+                console.log(text.trim())
+            } else {
+                alert('加载失败')
+            }
+        }
+    }   
+    request.send()
+}
+```
+
+
+### 使用AJAX请求JSON
+JSON官网说明：json.org
+
+JSON支持的数据类型：
+string - 只支持双引号，不支持单引号无引号
+number - 支持科学记数法
+bool - true和false
+null - 没有undefined
+object
+array
+
+```js
+getJSON.onclick = ()=>{
+    const request = new XMLHttpRequest();
+    request.open('GET', '/5.json');
+    request.onreadystatechange = () => {
+        if(request.readyState === 4 && request.status === 200){
+            console.log(request.response)
+            const object = JSON.parse(request.response)
+            myName.textContent = object.name
+        }
+    }
+    request.send()
+}
+```
+
+JSON.parse():
+将符合JSON语法的字符串转换成JS对应类型的数据
+
+JSON.stringify():
+JSON.parse()的逆运算,将符合JSON语法的JS数据转换成JSON格式
+
+
+### AJAX综合应用：加载分页
+
+
+
+
+
+
+
+### AJAX总结
+
+解析方法：
+得到CSS之后，生成style标签
+得到JS之后，生成script
+得到HTML之后，使用innerHTML和DOM API
+得到XML之后，使用responseXML和DOM API
+
+## 异步与Promise
+
+如果能直接拿到结果就是同步。
+
+如果不能直接拿到结果就是异步，比如餐厅等位，拿到号就可以走了。
+每10分钟去餐厅问一下是轮询；
+扫码用微信接收通知是回调。
+
+### 回调
+
+你写给自己用的函数，不是回调
+你写给别人用的函数，就是回调
+
+回调举例：
+
+```js
+function f1(){}
+function f2(fn){
+    fn()
+}
+f2(f1)
+```
+我调用了f2,f1是写了给f2调用的，所以f1是回调，f2不是回调。
+
+### 判断同步异步
+
+如果一个函数的返回值处于：
+* setTimeout
+* AJAX（即XMLHttpRequest）
+* AddEventListener
+这三个东西内部，那么这个函数就是异步函数。
+
+### 异步+回调
+
+* 异步任务不能拿到结果
+* 于是我们传一个回调给异步任务
+* 异步任务完成时调用回调，比如回调是console.log
+* 调用的时候把结果作为参数传给回调
+
+### 如何让一个回调的异步函数变成Promise的异步函数
+
+* 第一步
+
+return new Promise((resolve,reject)=>{...})
+任务成功则调用resolve(result)
+任务失败则调用reject(error)
+resolve和reject会再去调用成功和失败函数
+
+* 第二步
+
+使用.then(success, fail)传入成功和失败函数
+
+## 动态服务器
+
+从数据库拿数据就叫动态服务器
+
+### 以JSON文件作为数据库读写
+
+```js
+const fs = require("fs");
+
+// 读数据库
+const usersString = fs.readFileSync("./db/users.json").toString();
+const usersArray = JSON.parse(usersString);
+
+// 写数据库
+const user3 = {id:3, name:'tom', password:'yyy'}
+usersArray.push(user3)
+const string = JSON.stringify(usersArray)
+fs.writeFileSync('./db/users.json',string)
+
+```
+
+### 实现用户注册功能
+用户提交用户名密码
+users.json里就新增了一行数据
+
+思路：
+前端写一个form，让用户填写name和password
+前端坚挺submit事件
+前端发送post请求，数据位于请求体
+后端接收post请求
+后端获取请求体中的name和password
+后端存储数据
+
+## MVC
+
+### 抽象思维1
+
+将html/css/js拆分，各自模块化
+每一个具体的功能为独立的js，相应的html和css在js中引入。
+
+### 抽象思维2
+
+以不变应万变的mvc套路：
+
+
+## WebPack
+
+### 目标1
+用webpack转译js
+
+途径：
+* 进入webpack官网
+* crm学习法
+
+### 目标2
+理解文件名中的hash的用途
+
+附加知识：
+http响应头中的cache-control
+
+## VUE
+
+### 插值语法
+
+```js
+{{name}}
+
+new Vue({
+    data:{
+        name:'frank'
+    }
+})
+```
+
+### 元素属性绑定
+
+v-bind:value用于单向绑定，简写为`:value`
+v-moudel:value用于双向绑定，并不是所有元素都支持双向绑定，表单、输入类元素才支持，因为可以交互，简写为`v-model`
+
+标准写法：
+```js
+<div id="demo">
+        单向数据绑定：<input type="text" v-bind:value="value"><br/>
+        双向数据绑定：<input type="text" v-model:value="value">
+</div>
+```
+简写：
+```js
+<div id="demo">
+        单向数据绑定：<input type="text" :value="value"><br/>
+        双向数据绑定：<input type="text" v-model="value">
+</div>
+```
+
+### el与data的两种写法
+
+el：或者 vm.$mount
+data:{}对象式 或者 data(){return{}}函数式
+
+Vue管理的函数不要用箭头函数，因为箭头函数中的this会指代window，而不是vue这个实例。
+
+### MVVM模型
+
+M是模型model，data中的数据
+V是视图view，html，template代码
+VM就是ViewModel，Vue实例
+
+mvvm模型的工作机制：
+dom=>domlistener=>model
+dom<=binder<=model
+
+最终{{}}中，实际引用了通过vm创建的实例的属性，无论是自己在data中定义的还是vue原型带的都能用。
