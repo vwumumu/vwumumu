@@ -415,6 +415,8 @@ CCTV： 2007-01-12 15:53:17
 8月是月线上的标准第二类买点，周线上的在6月9日那一周 
 ```
 > ![image-20220101002618633](images/image-20220101002618633.png)
+>
+> ![image-20220116134459578](C:\Users\Mumu Wu\vwumumu\docs\chzhshch\vwumumu\vchzhshch093.assets\image-20220116134459578.png)
 
 ```
 缠中说禅 2007-01-12 17:28:58 
