@@ -472,6 +472,12 @@ MM,happy new year!!
 ==
 分时图，MACD怎么看，前面都有，太长，不写了。 
 ```
+> ![image-20220126215238235](C:\Users\Mumu Wu\vwumumu\docs\chzhshch\vwumumu\vchzhshch122.assets\image-20220126215238235.png)
+>
+> MACD辅助判断背驰，用回拉0轴看。
+>
+> 1F次次级别用分时图看。
+
 ```
 缠中说禅 2007-02-16 16:25:20 
 
