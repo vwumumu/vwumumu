@@ -1,5 +1,5 @@
 ---
- id: 'vchzhshch112'
+id: 'vchzhshch112'
 title: '112.教你炒股票28：下一目标：摧毁基金'
 ---
 

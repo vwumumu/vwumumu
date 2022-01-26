@@ -130,7 +130,17 @@ const sidebars = {
         'chzhshch/original/chzhshch107',
         'chzhshch/original/chzhshch108',
         'chzhshch/original/chzhshch109',
-        'chzhshch/original/chzhshch110'
+        'chzhshch/original/chzhshch110',
+        'chzhshch/original/chzhshch111',
+        'chzhshch/original/chzhshch112',
+        'chzhshch/original/chzhshch113',
+        'chzhshch/original/chzhshch114',
+        'chzhshch/original/chzhshch115',
+        'chzhshch/original/chzhshch116',
+        'chzhshch/original/chzhshch117',
+        'chzhshch/original/chzhshch118',
+        'chzhshch/original/chzhshch119',
+        'chzhshch/original/chzhshch120'
       ],
     },
     {
@@ -246,7 +256,17 @@ const sidebars = {
         'chzhshch/vwumumu/vchzhshch107',
         'chzhshch/vwumumu/vchzhshch108',
         'chzhshch/vwumumu/vchzhshch109',
-        'chzhshch/vwumumu/vchzhshch110'
+        'chzhshch/vwumumu/vchzhshch110',
+        'chzhshch/vwumumu/vchzhshch111',
+        'chzhshch/vwumumu/vchzhshch112',
+        'chzhshch/vwumumu/vchzhshch113',
+        'chzhshch/vwumumu/vchzhshch114',
+        'chzhshch/vwumumu/vchzhshch115',
+        'chzhshch/vwumumu/vchzhshch116',
+        'chzhshch/vwumumu/vchzhshch117',
+        'chzhshch/vwumumu/vchzhshch118',
+        'chzhshch/vwumumu/vchzhshch119',
+        'chzhshch/vwumumu/vchzhshch120'
       ],
       collapsible: false
     },
