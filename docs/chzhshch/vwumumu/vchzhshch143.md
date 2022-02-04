@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch143'
+id: 'vchzhshch143'
 title: '143.神州自有中天日，万国衣冠舞九韶'
 ---
 

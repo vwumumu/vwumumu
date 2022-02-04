@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch147'
+id: 'vchzhshch147'
 title: '147.教你炒股票39：同级别分解再研究'
 ---
 

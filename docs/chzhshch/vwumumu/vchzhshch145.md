@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch145'
+id: 'vchzhshch145'
 title: '145.教你炒股票38：走势类型连接的同级别分解'
 ---
 

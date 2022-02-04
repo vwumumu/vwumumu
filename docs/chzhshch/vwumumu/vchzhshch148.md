@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch148'
+id: 'vchzhshch148'
 title: '148.《论语》详解：给所有曲解孔子的人（60）'
 ---
 
