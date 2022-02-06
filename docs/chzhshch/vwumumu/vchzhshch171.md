@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch171'
+id: 'vchzhshch171'
 title: '171.“全民炒股”，市场经济走向成熟的必由之路'
 ---
 
