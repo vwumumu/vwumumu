@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkczsc=self.webpackChunkczsc||[]).push([[8888],{49821:function(e){e.exports=JSON.parse('{"permalink":"/vwumumu/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

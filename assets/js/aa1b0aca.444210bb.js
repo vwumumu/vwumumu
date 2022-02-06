@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkczsc=self.webpackChunkczsc||[]).push([[606],{77373:function(u){u.exports=JSON.parse('{"allTagsPath":"/vwumumu/blog/tags","slug":"/vwumumu/blog/tags/facebook","name":"facebook","count":1,"permalink":"/vwumumu/blog/tags/facebook"}')}}]);
