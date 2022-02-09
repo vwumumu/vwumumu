@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch199'
+id: 'vchzhshch199'
 title: '199.教你炒股票58：图解分析示范三'
 ---
 

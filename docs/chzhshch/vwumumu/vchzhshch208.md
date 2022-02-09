@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch208'
+id: 'vchzhshch208'
 title: '208.看待当前资本市场必须具有的基本智慧'
 ---
 

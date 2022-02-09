@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch205'
+id: 'vchzhshch205'
 title: '205.《论语》详解：给所有曲解孔子的人（66）'
 ---
 

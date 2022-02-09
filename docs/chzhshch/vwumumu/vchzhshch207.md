@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch207'
+id: 'vchzhshch207'
 title: '207.教你打坐2：人都要死的人都死了'
 ---
 

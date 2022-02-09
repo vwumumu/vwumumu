@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch206'
+id: 'vchzhshch206'
 title: '206.教你炒股票59：图解分析示范四'
 ---
 
