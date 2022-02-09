@@ -26,7 +26,7 @@ title: '197.教你炒股票57：当下图解分析再示范'
 
  
 
- 
+ ![image-20220209191253736](D:\Sync\vwumumu\docs\chzhshch\vwumumu\vchzhshch197.assets\image-20220209191253736.png)
 
  
 
@@ -136,6 +136,10 @@ CCTV： 2007-06-01 08:55:33
 --
 后面不就调整了一下吗？？？下面又没有中枢，不存在拉回中枢的问题呀！！！而且真的背驰，还要看黄白线，没有拉回0轴呀！！！ 
 ```
+> ![image-20220209203653108](D:\Sync\vwumumu\docs\chzhshch\vwumumu\vchzhshch197.assets\image-20220209203653108.png)
+>
+> 是盘整背驰，但是盘整背驰不意味着要回拉到中枢里。
+
 ```
 CCTV： 2007-06-01 08:57:56 
 
