@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch220'
+id: 'vchzhshch220'
 title: '220.教你炒股票62：分型、笔与线段 '
 ---
 

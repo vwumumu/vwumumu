@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch223'
+id: 'vchzhshch223'
 title: '223.教你炒股票64：去机场路上给各位补课'
 ---
 

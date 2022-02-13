@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch222'
+id: 'vchzhshch222'
 title: '222.解盘：今天看不明白的都请严重补课。'
 ---
 

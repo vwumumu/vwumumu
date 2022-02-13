@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch213'
+id: 'vchzhshch213'
 title: '213.周末，用股票长沙各位一把'
 ---
 

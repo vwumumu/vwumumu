@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch221'
+id: 'vchzhshch221'
 title: '221.教你炒股票63：替各位理理基本概念'
 ---
 

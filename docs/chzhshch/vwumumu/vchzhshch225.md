@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch225'
+id: 'vchzhshch225'
 title: '225.今晚，国际歌响彻人民大会堂'
 ---
 

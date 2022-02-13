@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch219'
+id: 'vchzhshch219'
 title: '219.解盘并说说中短线走势'
 ---
 

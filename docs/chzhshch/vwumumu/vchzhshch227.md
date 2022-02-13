@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch227'
+id: 'vchzhshch227'
 title: '227.告全国散户、大股东、庄家、基金及管理层书'
 ---
 

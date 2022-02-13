@@ -1,5 +1,5 @@
 ---
-id: 'chzhshch217'
+id: 'vchzhshch217'
 title: '217.一根筋是不适合玩震荡行情的'
 ---
 
