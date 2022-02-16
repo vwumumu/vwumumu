@@ -1,4 +1,4 @@
 ---
-id: 'chzhshch240'
-title: '240.'
+id: 'chzhshch250'
+title: '250.'
 ---
