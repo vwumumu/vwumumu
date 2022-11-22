@@ -2,39 +2,39 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://vwumumu.github.io/en/about/</loc><lastmod>2022-05-14T18:01:55&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://vwumumu.github.io/vwumumu/en/about/</loc><lastmod>2022-05-14T18:01:55&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://vwumumu.github.io/about/"
+                        href="https://vwumumu.github.io/vwumumu/about/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://vwumumu.github.io/en/about/"
+                    href="https://vwumumu.github.io/vwumumu/en/about/"
                     /></url><url>
-            <loc>https://vwumumu.github.io/en/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://vwumumu.github.io/vwumumu/en/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://vwumumu.github.io/categories/"
+                        href="https://vwumumu.github.io/vwumumu/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://vwumumu.github.io/en/categories/"
+                    href="https://vwumumu.github.io/vwumumu/en/categories/"
                     /></url><url>
-            <loc>https://vwumumu.github.io/en/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://vwumumu.github.io/vwumumu/en/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://vwumumu.github.io/"
+                        href="https://vwumumu.github.io/vwumumu/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://vwumumu.github.io/en/"
+                    href="https://vwumumu.github.io/vwumumu/en/"
                     /></url><url>
-            <loc>https://vwumumu.github.io/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://vwumumu.github.io/vwumumu/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://vwumumu.github.io/tags/"
+                        href="https://vwumumu.github.io/vwumumu/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://vwumumu.github.io/en/tags/"
+                    href="https://vwumumu.github.io/vwumumu/en/tags/"
                     /></url></urlset>
